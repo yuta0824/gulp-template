@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// カラーなど変数読み込み
+@use "setting/setting";
+
+// ミックスイン
+@use "mixin/mixin";
+
+// リセットcss
+@use "./foundation";
+
+// 汎用モジュール
+@use "./modules";
+
+// 各ページ
+@use './page';//_index.scssは省略可能
+
+// アニメーション
+@use './library/animate';

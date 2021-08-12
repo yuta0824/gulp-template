@@ -1,0 +1,77 @@
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+/*===============================
+共通レイアウト
+===============================*/
+
+/*----------- inner ---------------*/
+.inner {
+  max-width: $layout_inner - $pd_pc * 2;
+  height: inherit;
+  margin: 0 auto;
+  padding: 0 $pd_pc;
+
+  @include mq("tab") {
+    padding-right: $pd_tab;
+    padding-left: $pd_tab;
+  }
+
+  @include mq("sp") {
+    padding-right: $pd_sp;
+    padding-left: $pd_sp;
+  }
+}
+
+/*------------ フォント ----------------*/
+.serif {
+  font-family: "Noto Serif JP";
+}
+
+
+// pcのみ表示
+.is_pc {
+  @include mq("sp") {
+    display: none;
+  }
+
+  @include mq("tab") {
+    display: none;
+  }
+}
+
+// tabとpcで表示
+.is_tab_pc {
+  @include mq("sp") {
+    display: none;
+  }
+}
+
+//pcのみ表示
+.is_pc {
+  @include mq("sp") {
+    display: none;
+  }
+
+  @include mq("tab") {
+    display: none;
+  }
+}
+
+// tabのみ表示
+.is_tab {
+  @include mq("pc") {
+    display: none;
+  }
+
+  @include mq("sp") {
+    display: none;
+  }
+}
+
+// spのみ表示
+.is_sp {
+  @include mq("tab_pc") {
+    display: none;
+  }
+}
+

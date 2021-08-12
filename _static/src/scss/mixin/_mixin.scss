@@ -1,0 +1,24 @@
+@use '../setting/setting' as s;
+
+//メディアクエリー
+@mixin mq($breakpoint: sp) {
+  @media only screen and #{map-get(s.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//固定値（px）をvwに変換する記述
+//参考サイトhttps://haniwaman.com/vw/
+@function vw($width, $px) {
+  @return $px / $width * 100vw;
+}
+
+// 割り算
+@function division($numerator, $denominator) {
+	@return $numerator / $denominator;
+}
+
+// letter-spacing計算
+@function lsp($letter_spacing, $font_size) {
+	@return $letter_spacing / $font_size * 1em;
+}

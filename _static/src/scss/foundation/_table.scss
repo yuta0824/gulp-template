@@ -1,0 +1,21 @@
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+/*===============================
+テーブル
+===============================*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid $cr_table;
+}
+
+th,
+td {
+  padding: 4px 6px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid $cr_table;
+}

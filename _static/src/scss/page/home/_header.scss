@@ -1,0 +1,48 @@
+@use '../../mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/*===============================
+header
+===============================*/
+.header {
+  height: $header_height;
+  background: $cr_main;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: map-get($layer, header);
+
+  @include mq("sp") {
+    height: $header_height_sp;
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  max-width: 150px;
+
+  img {
+  }
+}
+
+.header__nav {
+  margin-left: auto;
+}
+
+.nav {
+  max-width: 300px;
+  width: 100%;
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+  }
+}

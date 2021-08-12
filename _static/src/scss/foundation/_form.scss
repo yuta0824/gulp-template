@@ -1,0 +1,238 @@
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+/*===============================
+フォーム
+===============================*/
+form {
+  margin: 0;
+  padding: 0;
+
+  //ボタン
+  button {
+    width: auto;
+    display: inline-block;
+    margin: 0;
+    background-image: none;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.3s ease 0s;
+    //カスタム
+    color: #fff;
+    padding: 0.6em 2em;
+    background-color: $cr_main;
+    font-size: 1.6rem;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: $opacity;
+    }
+
+    ::-moz-focus-inner {
+      padding: 0;
+      border: none;
+    }
+  }
+}
+
+//テキスト,メール,セレクト,テキストエリア
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid $cr_form_bd;
+  border-radius: 0;
+  background-color: transparent;
+  background-image: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: inherit;
+  appearance: none;
+}
+
+//テキストエリア
+textarea {
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $cr_form_bd_active;
+    box-shadow: none;
+  }
+
+  ::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
+}
+
+input {
+  &:focus {
+    outline: none;
+    border-color: $cr_form_bd_active;
+    box-shadow: none;
+  }
+
+  //ボタン
+  &[type="submit"],
+  &[type="button"] {
+    width: auto;
+    display: inline-block;
+    margin: 0;
+    background-image: none;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.3s ease 0s;
+    //カスタム
+    color: #fff;
+    padding: 0.6em 2em;
+    background-color: $cr_main;
+    font-size: 1.6rem;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: $opacity;
+    }
+
+    ::-moz-focus-inner {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  //ラジオボタン
+  &[type="radio"] {
+    display: none;
+
+    + span {
+      display: inline-block;
+      position: relative;
+      padding: 0 0 0 $size_radio_pd_left;
+      margin: 0 16px 0 0;
+      cursor: pointer;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: #fff;
+        border: 1px solid $cr_form_bd;
+        border-radius: 50%;
+        width: $size_radio;
+        height: $size_radio;
+        display: block;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: ($size_radio - $size_radio_active) / 2;
+        transform: translateY(-50%);
+        background: $cr_check;
+        border-radius: 50%;
+        width: $size_radio_active;
+        height: $size_radio_active;
+        display: block;
+        opacity: 0;
+        transition: opacity 0.3s ease 0s;
+      }
+    }
+
+    &:checked + span {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  //テェックボックス
+  &[type="checkbox"] {
+    display: none;
+
+    + span {
+      display: inline-block;
+      position: relative;
+      padding: 0 0 0 $size_checkbox_pd_left;
+      margin: 0 16px 0 0;
+      cursor: pointer;
+      transition: all 1s ease 0s;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: #fff;
+        border: 1px solid $cr_form_bd;
+        border-radius: 2px;
+        width: $size_checkbox;
+        height: $size_checkbox;
+        display: block;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) rotate(-45deg);
+        width: $size_checkbox;
+        height: ($size_checkbox * 0.6);
+        margin-top: -0.2em;
+        display: block;
+        border-left: 4px solid $cr_check_active;
+        border-bottom: 4px solid $cr_check_active;
+        opacity: 0;
+        transition: opacity 0.3s ease 0s;
+      }
+    }
+
+    &:checked + span {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//セレクト
+select {
+  background-image: url(../img/arrow.png);
+  background-position: right 6px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  cursor: pointer;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: $cr_form_bd_active;
+  }
+}
