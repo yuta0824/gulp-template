@@ -1,6 +1,0 @@
-@use "setting/setting";
-@use "mixin/mixin";
-@use "./foundation";
-@use "./modules";
-@use './page';
-@use './library/animate';
