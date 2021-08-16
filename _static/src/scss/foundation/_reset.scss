@@ -49,17 +49,17 @@ html {
   font-size: 10px;
 
   @include mq("vw") {
-    font-size: 1000 / $vw_inner * 1vw;
+    font-size: 1000 / $vw-inner * 1vw;
   }
 }
 
 body {
-  background: $cr_background;
-  color: $cr_text;
-  font-family: $font_family_sans;
-  line-height: $lh_base;
-  font-weight: $fw_base;
-  font-size: $fz_base;
+  background: $cr-background;
+  color: $cr-text;
+  font-family: $font-family-sans;
+  line-height: $lh-base;
+  font-weight: $fw-base;
+  font-size: $fz-base;
 }
 
 ol,
@@ -85,19 +85,19 @@ figcaption {
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote::after,
 blockquote::before,
 q::after,
 q::before {
-	content: "";
-	content: none;
+  content: "";
+  content: none;
 }
 
 address {
-	font-style: normal;
+  font-style: normal;
 }
 
 img {
@@ -117,4 +117,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-

@@ -1,10 +1,10 @@
-# gulp-test
+# gulp-template
 ## How to Use
 ```
-$ git clone https://github.com/Ichikun0000/gulp-test.git
+$ git clone https://github.com/yuta0824/gulp-template
 ```
 ```
-$ cd gulp-test
+$ cd gulp-template
 ```
 ```
 $ npm i

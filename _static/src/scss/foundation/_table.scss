@@ -9,7 +9,7 @@ table {
   border-spacing: 0;
   width: 100%;
   table-layout: fixed;
-  border: 1px solid $cr_table;
+  border: 1px solid $cr-table;
 }
 
 th,
@@ -17,5 +17,5 @@ td {
   padding: 4px 6px;
   text-align: left;
   vertical-align: top;
-  border: 1px solid $cr_table;
+  border: 1px solid $cr-table;
 }

@@ -23,7 +23,7 @@ form {
     //カスタム
     color: #fff;
     padding: 0.6em 2em;
-    background-color: $cr_main;
+    background-color: $cr-main;
     font-size: 1.6rem;
 
     &:hover,
@@ -49,7 +49,7 @@ select,
 textarea {
   width: 100%;
   padding: 8px;
-  border: 1px solid $cr_form_bd;
+  border: 1px solid $cr-form-bd;
   border-radius: 0;
   background-color: transparent;
   background-image: none;
@@ -68,7 +68,7 @@ textarea {
 
   &:focus {
     outline: none;
-    border-color: $cr_form_bd_active;
+    border-color: $cr-form-bd-active;
     box-shadow: none;
   }
 
@@ -81,7 +81,7 @@ textarea {
 input {
   &:focus {
     outline: none;
-    border-color: $cr_form_bd_active;
+    border-color: $cr-form-bd-active;
     box-shadow: none;
   }
 
@@ -101,7 +101,7 @@ input {
     //カスタム
     color: #fff;
     padding: 0.6em 2em;
-    background-color: $cr_main;
+    background-color: $cr-main;
     font-size: 1.6rem;
 
     &:hover,
@@ -126,7 +126,7 @@ input {
     + span {
       display: inline-block;
       position: relative;
-      padding: 0 0 0 $size_radio_pd_left;
+      padding: 0 0 0 $size-radio-pd-left;
       margin: 0 16px 0 0;
       cursor: pointer;
 
@@ -137,10 +137,10 @@ input {
         left: 0;
         transform: translateY(-50%);
         background: #fff;
-        border: 1px solid $cr_form_bd;
+        border: 1px solid $cr-form-bd;
         border-radius: 50%;
-        width: $size_radio;
-        height: $size_radio;
+        width: $size-radio;
+        height: $size-radio;
         display: block;
       }
 
@@ -148,12 +148,12 @@ input {
         position: absolute;
         content: "";
         top: 50%;
-        left: ($size_radio - $size_radio_active) / 2;
+        left: ($size-radio - $size-radio-active) / 2;
         transform: translateY(-50%);
-        background: $cr_check;
+        background: $cr-check;
         border-radius: 50%;
-        width: $size_radio_active;
-        height: $size_radio_active;
+        width: $size-radio-active;
+        height: $size-radio-active;
         display: block;
         opacity: 0;
         transition: opacity 0.3s ease 0s;
@@ -174,7 +174,7 @@ input {
     + span {
       display: inline-block;
       position: relative;
-      padding: 0 0 0 $size_checkbox_pd_left;
+      padding: 0 0 0 $size-checkbox-pd-left;
       margin: 0 16px 0 0;
       cursor: pointer;
       transition: all 1s ease 0s;
@@ -186,10 +186,10 @@ input {
         left: 0;
         transform: translateY(-50%);
         background: #fff;
-        border: 1px solid $cr_form_bd;
+        border: 1px solid $cr-form-bd;
         border-radius: 2px;
-        width: $size_checkbox;
-        height: $size_checkbox;
+        width: $size-checkbox;
+        height: $size-checkbox;
         display: block;
       }
 
@@ -199,12 +199,12 @@ input {
         top: 50%;
         left: 0;
         transform: translateY(-50%) rotate(-45deg);
-        width: $size_checkbox;
-        height: ($size_checkbox * 0.6);
+        width: $size-checkbox;
+        height: ($size-checkbox * 0.6);
         margin-top: -0.2em;
         display: block;
-        border-left: 4px solid $cr_check_active;
-        border-bottom: 4px solid $cr_check_active;
+        border-left: 4px solid $cr-check-active;
+        border-bottom: 4px solid $cr-check-active;
         opacity: 0;
         transition: opacity 0.3s ease 0s;
       }
@@ -233,6 +233,6 @@ select {
   &:focus {
     outline: none;
     box-shadow: none;
-    border-color: $cr_form_bd_active;
+    border-color: $cr-form-bd-active;
   }
 }

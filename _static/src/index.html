@@ -18,57 +18,92 @@
   <link rel="apple-touch-icon" href="https://xxxxx.com/img/apple-touch-icon.png">
   <link rel="icon" href="favicon.ico"> -->
 
-  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <!-- <link rel="stylesheet" href="fontawesome/css/all.min.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+
+
 <body>
   <header class="header">
-    <div class="inner header__inner">
+    <div class="header__inner l-inner">
       <h1 class="header__logo"><a href="/"><img src="./img/logo.png" alt="ロゴ"></a></h1>
-      <nav class="header__nav nav is_tab_pc">
-        <ul>
-          <li><a href="/">ホーム</a></li>
-          <li><a href="/">about</a></li>
-          <li><a href="/contact">contact</a></li>
+      <nav class="header__nav nav is-tab-pc">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="/">ホーム</a></li>
+          <li class="nav__item"><a href="/">about</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
         </ul>
       </nav>
     </div>
+
+    <a class="header__drawer drawer is-sp">
+      <span class="drawer__line drawer__line--top"></span>
+      <span class="drawer__line drawer__line--center"></span>
+      <span class="drawer__line drawer__line--bottom"></span>
+    </a><!-- /.ドロワーアイコン -->
+
+    <nav class="header__drawer-nav drawer-nav">
+      <div class="drawer-nav__wrap">
+        <ul class="drawer-nav__items">
+          <li class="drawer-nav__item drawer-nav__home">
+            <a href="./"><img src="./img/logo.png"></a>
+          </li>
+          <li class="drawer-nav__item"><a href=""><span>home</span>ホーム</a></li>
+          <li class="drawer-nav__item"><a href=""><span>home</span>ホーム</a></li>
+          <li class="drawer-nav__item"><a href=""><span>home</span>ホーム</a></li>
+        </ul>
+      </div>
+    </nav><!-- /.ドロワーメニュー -->
   </header><!-- /.header -->
 
-  <a class="menu is_sp">
-    <span class="menu__line menu__line--top"></span>
-    <span class="menu__line menu__line--center"></span>
-    <span class="menu__line menu__line--bottom"></span>
-  </a>
-
-  <nav class="gnav">
-    <div class="gnav__wrap">
-      <ul class="gnav__menu">
-        <li class="gnav__menu__item gnav_home">
-          <a href="./"><img src="./img/logo.png"></a>
-        </li>
-        <li class="gnav__menu__item"><a href=""><span>home</span>ホーム</a></li>
-        <li class="gnav__menu__item"><a href=""><span>home</span>ホーム</a></li>
-        <li class="gnav__menu__item"><a href=""><span>home</span>ホーム</a></li>
-      </ul>
-    </div>
-  </nav><!-- ハンバーガーメニュー -->
-
   <main class="main">
-    <div class="boxs">
-      <div class="box box_l">BOX L</div>
-      <div class="box box_m">BOX M</div>
-      <div class="box box_s">BOX S</div>
+    <div class="main__inner l-inner">
+      <h2 class="main__section-title c-section-title">メインコンテンツ</h2>
+      <div class="main__boxs boxs">
+        <div class="box box--l">BOX L</div>
+        <div class="box box--m">BOX M</div>
+        <div class="box box--s">BOX S</div>
+      </div>
+      <div class="main__btn c-btn c-btn--main"> <a href="/">ホームページ</a></div>
+      <div class="main__btn c-btn c-btn--sub"> <a href="/contact">コンタクトページ</a></div>
+      <div class="main__map map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.74797546837!2d139.74324421470988!3d35.65858048019957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1629097035184!5m2!1sja!2sjp"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
     </div>
-    <div class="main__btn btn btn--01"> <a href="/">ホームページ</a></div>
-    <div class="main__btn btn btn--02"> <a href="/contact">コンタクトページ</a></div>
-  </main>
+  </main><!-- /.main -->
+
+
+  <footer class="footer">
+    <div class="footer__inner l-inner">
+      <div class="footer__text"></div>
+      <div class="footer__nav nav">
+        <ul class="nav__items nav__items--wrap">
+          <li class="nav__item"><a href="/">ホーム</a></li>
+          <li class="nav__item"><a href="/">about</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+          <li class="nav__item"><a href="/contact">contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer><!-- /.footer -->
 
 
   <!-- topへ戻る -->
   <!-- <a class="to_top" href="#"><i class="fas fa-angle-double-up"></i></a> -->
-  <a class="to_top" href="#">上</a>
+  <a class="c-to-top" href="#">^</a>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>

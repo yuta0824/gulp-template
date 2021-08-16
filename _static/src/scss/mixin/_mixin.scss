@@ -2,7 +2,7 @@
 
 //メディアクエリー
 @mixin mq($breakpoint: sp) {
-  @media only screen and #{map-get(s.$breakpoints, $breakpoint)} {
+  @media screen and #{map-get(s.$breakpoints, $breakpoint)} {
     @content;
   }
 }
@@ -13,12 +13,103 @@
   @return $px / $width * 100vw;
 }
 
-// 割り算
-@function division($numerator, $denominator) {
-	@return $numerator / $denominator;
+// letter-spacing計算
+@function lsp($letter-spacing, $font-size) {
+  @return $letter-spacing / $font-size * 1em;
 }
 
-// letter-spacing計算
-@function lsp($letter_spacing, $font_size) {
-	@return $letter_spacing / $font_size * 1em;
+//3点リーダーの記述
+@mixin line-clamp($count: 3) {
+  @if $count == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+//マップやYouTubeの埋め込み
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    content: "";
+    float: left;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  & > :first-child {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+//三角形の作成
+@mixin triangle($direction, $width, $height, $color: currentColor) {
+  // 定義されている方向が指定されている、もしくは方向が指定されていなかったらエラーを返す
+  @if not
+    index(
+      up right down left upper-left upper-right lower-right lower-left,
+      $direction
+    )
+  {
+    @error 'triangle()の方向は"up","right","down","left","upper-left","upper-right","lower-right","lower-left"から指定してください';
+  }
+
+  border-style: solid;
+  height: 0;
+  width: 0;
+
+  @if $direction == up {
+    border-color: transparent transparent $color transparent;
+    border-width: 0 ($width / 2) $height ($width / 2);
+  }
+
+  @if $direction == right {
+    border-color: transparent transparent transparent $color;
+    border-width: ($height / 2) 0 ($height / 2) $width;
+  }
+
+  @if $direction == down {
+    border-color: $color transparent transparent transparent;
+    border-width: $height ($width / 2) 0 ($width / 2);
+  }
+
+  @if $direction == left {
+    border-color: transparent $color transparent transparent;
+    border-width: ($height / 2) $width ($height / 2) 0;
+  }
+
+  @if $direction == upper-left {
+    border-color: $color transparent transparent transparent;
+    border-width: $height $height 0 0;
+  }
+
+  @if $direction == upper-right {
+    border-color: transparent $color transparent transparent;
+    border-width: 0 $height $height 0;
+  }
+
+  @if $direction == lower-right {
+    border-color: transparent transparent $color transparent;
+    border-width: 0 0 $height $height;
+  }
+
+  @if $direction == lower-left {
+    border-color: transparent transparent transparent $color;
+    border-width: $height 0 0 $height;
+  }
 }

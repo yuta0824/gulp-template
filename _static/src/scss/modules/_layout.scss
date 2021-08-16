@@ -5,31 +5,35 @@
 ===============================*/
 
 /*----------- inner ---------------*/
-.inner {
-  max-width: $layout_inner - $pd_pc * 2;
+.l-inner {
+  max-width: $layout-inner - $pd-pc * 2;
   height: inherit;
   margin: 0 auto;
-  padding: 0 $pd_pc;
+  padding: 0 $pd-pc;
 
   @include mq("tab") {
-    padding-right: $pd_tab;
-    padding-left: $pd_tab;
+    padding-right: $pd-tab;
+    padding-left: $pd-tab;
   }
 
   @include mq("sp") {
-    padding-right: $pd_sp;
-    padding-left: $pd_sp;
+    padding-right: $pd-sp;
+    padding-left: $pd-sp;
   }
 }
 
+.hoge {
+  font-size: vw(500, 17);
+  letter-spacing: lsp(1.5, 16);
+}
+
 /*------------ フォント ----------------*/
-.serif {
+.l-serif {
   font-family: "Noto Serif JP";
 }
 
-
 // pcのみ表示
-.is_pc {
+.is-pc {
   @include mq("sp") {
     display: none;
   }
@@ -40,25 +44,14 @@
 }
 
 // tabとpcで表示
-.is_tab_pc {
+.is-tab-pc {
   @include mq("sp") {
-    display: none;
-  }
-}
-
-//pcのみ表示
-.is_pc {
-  @include mq("sp") {
-    display: none;
-  }
-
-  @include mq("tab") {
     display: none;
   }
 }
 
 // tabのみ表示
-.is_tab {
+.is-tab {
   @include mq("pc") {
     display: none;
   }
@@ -69,9 +62,8 @@
 }
 
 // spのみ表示
-.is_sp {
-  @include mq("tab_pc") {
+.is-sp {
+  @include mq("tab-pc") {
     display: none;
   }
 }
-
