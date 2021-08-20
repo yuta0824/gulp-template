@@ -4,7 +4,7 @@
 $ git clone https://github.com/yuta0824/gulp-template
 ```
 ```
-$ cd gulp-template
+$ cd gulp-template/_gulp
 ```
 ```
 $ npm i

@@ -17,6 +17,14 @@
 参考サイト
 https://www.webdesignleaves.com/pr/plugins/fontawesome_03.html
 https://fontawesome.com/v5.15/icons?d=gallery&p=2
+
+##github
+
+
+##head内記述
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+##CSS記述
 .擬似要素 {
   font-family: "Font Awesome 5 Free";
 	font-weight: 900;
@@ -39,3 +47,9 @@ https://daib-log.com/carousel/
 /*------------  WP予約フォーム  ------------*/
 参考サイト
 https://form.run/media/contents/website-lp-creation/wordpress-reservation-systems/
+
+
+/*------------  Github参考  ------------*/
+https://flex-box.net/git/
+
+
