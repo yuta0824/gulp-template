@@ -46,17 +46,17 @@ figure {
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
 
   @include mq("vw") {
-    font-size: 1000 / $vw-inner * 1vw;
+    font-size: 1000 / $vw-inner-plain * 1vw;
   }
 }
 
 body {
   background: $cr-background;
   color: $cr-text;
-  font-family: $font-family-sans;
+  font-family: $ff-base;
   line-height: $lh-base;
   font-weight: $fw-base;
   font-size: $fz-base;
@@ -104,6 +104,7 @@ img {
   border: none;
   vertical-align: bottom;
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 

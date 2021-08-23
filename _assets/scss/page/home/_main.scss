@@ -4,7 +4,7 @@
 /*===============================
 main
 ===============================*/
-main {
+.main {
   margin-top: $header-height;
   padding: 30px 0;
 
@@ -32,7 +32,7 @@ main {
   align-items: center;
   justify-content: center;
 
-  @include mq("tab-pc") {
+  @include mq("pc") {
     &:not(:last-child) {
       margin-right: 2rem;
     }

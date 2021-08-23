@@ -23,6 +23,9 @@ git push -u origin main
 ## ローカルリポジトリでコミットしたものをリモートリポジトリにプッシュする
 git push origin main
 
+## リモートリポジトリでコミットしたものをローカルリポジトリでプルする
+git pull
+
 ## develpブランチに移動する
 git checkout develop
 

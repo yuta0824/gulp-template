@@ -25,43 +25,37 @@
 
 /*----------- ボタン ---------------*/
 .c-btn {
-  a {
-    display: inline-block;
-    padding: 1rem 2rem;
-    transition: all 0.3s ease 0s;
+  display: inline-block;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease 0s;
 
-    // &::after {
-    //   padding-left: 2rem;
-    //   font-family: "Font Awesome 5 Free";
-    //   font-weight: 900;
-    //   content: "\f101";
-    // }
+  // &::after {
+  //   padding-left: 2rem;
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   content: "\f101";
+  // }
 
-    &:hover {
-      box-shadow: 0px 6px 0px 0px rgb(134, 134, 134);
-      transform: translateY(-4px);
-    }
+  &:hover {
+    box-shadow: 0px 6px 0px 0px rgb(134, 134, 134);
+    transform: translateY(-4px);
+  }
 
-    &:active {
-      box-shadow: 0px 6px 0px 0px rgb(134, 134, 134);
-      transform: translateY(0px);
-    }
+  &:active {
+    box-shadow: 0px 6px 0px 0px rgb(134, 134, 134);
+    transform: translateY(0px);
   }
 }
 
 .c-btn--sub {
-  a {
-    background: $cr-accent;
-    color: #fff;
-  }
+  background: $cr-accent;
+  color: #fff;
 }
 
 .c-btn--main {
-  a {
-    color: $cr-main;
-    border: 1px solid $cr-main;
-    border-radius: 25px;
-  }
+  color: $cr-main;
+  border: 1px solid $cr-main;
+  border-radius: 25px;
 }
 
 /*----------- トップへ戻る ---------------*/
@@ -83,7 +77,7 @@
     opacity: 1;
   }
 
-  @include mq("tab") {
+  @include mq("tab-only") {
     right: $pd-tab;
   }
 

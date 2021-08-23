@@ -21,18 +21,23 @@ $pd-pc: 40px;
 $pd-tab: 30px;
 $pd-sp: 20px;
 
-// レイアウト幅
-$layout-inner: 1280px;
+// レイアウト幅(px)
+$layout-inner: 1200px;
 $tab-inner: 768px;
-$vw-inner: 1000; //pxつけない
+$vw-inner: 1000px;
+
+// レイアウト幅
+$layout-inner-plain: 1200;
+$tab-inner-plain: 768;
+$vw-inner-plain: 1000;
 
 // ブレークポイント
 $breakpoints: (
   "sp": "(max-width: #{$tab-inner - 1px})",
-  "tab-pc": "(min-width: #{$tab-inner})",
-  "tab": "(min-width: #{$tab-inner}) and (max-width: #{$layout-inner - 1px})",
-  "pc": "(min-width: #{$layout-inner})",
-  "vw": "(min-width: #{$tab-inner}) and (max-width: #{$vw-inner}px)",
+  "pc": "(min-width: #{$tab-inner})",
+  "tab-only": "(min-width: #{$tab-inner}) and (max-width: #{$layout-inner - 1px})",
+  "pc-only": "(min-width: #{$layout-inner})",
+  "vw": "(min-width: #{$tab-inner}) and (max-width: #{$vw-inner})",
 );
 
 // ヘッダー高さ
@@ -58,8 +63,8 @@ $font-family-sans: "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic,
 // ボディベース
 $fz-base: 1.6rem;
 $ff-base: "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic,
-  "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
-  "MS Pゴシック", "MS PGothic", sans-serif;
+"ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+"MS Pゴシック", "MS PGothic", sans-serif;
 $fw-base: 400;
 $lh-base: 1.6;
 

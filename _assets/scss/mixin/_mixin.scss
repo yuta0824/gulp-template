@@ -1,8 +1,8 @@
-@use '../setting/setting' as s;
+@use '../setting/setting' as *;
 
 //メディアクエリー
 @mixin mq($breakpoint: sp) {
-  @media screen and #{map-get(s.$breakpoints, $breakpoint)} {
+  @media screen and #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
 }
@@ -10,18 +10,24 @@
 //固定値（px）をvwに変換する記述
 //参考サイトhttps://haniwaman.com/vw/
 //$width = vw幅
-@function vw($px, $width: 1000) {
+@function vw($px, $width: $vw-inner-plain) {
   @return $px / $width * 100vw;
 }
 
-//paddingやmarginをemで指定
-@function em($padding, $fz: 16) {
-  @return $padding / $fz * 1em;
+//paddingやmarginをemで計算
+@function em($padding, $font-size: 16) {
+  @return $padding / $font-size * 1em;
 }
 
 // letter-spacing計算
-@function lsp($letter-spacing, $font-size) {
+@function lsp($letter-spacing, $font-size: 16) {
   @return $letter-spacing / $font-size * 1em;
+}
+
+// paddingやmarginを%計算
+@function pct($padding, $layout-inner-size: $layout-inner-plain) {
+  //デザインカンプのインナー幅
+  @return percentage($padding / $layout-inner-size);
 }
 
 //3点リーダーの記述
@@ -117,5 +123,49 @@
   @if $direction == lower-left {
     border-color: transparent transparent transparent $color;
     border-width: $height 0 0 $height;
+  }
+}
+
+//カードアイテムn枚並び
+@mixin card-row($n: 3, $mr: 2rem, $mt: 2rem, $mt-sp: 1rem) {
+  width: calc((100% / #{$n}) - #{$mr} * #{$n - 1} / #{$n});
+  margin-right: $mr;
+
+  &:nth-child(#{$n}n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(n + #{$n + 1}) {
+    margin-top: $mt;
+  }
+
+  @include mq("sp") {
+    width: 100%;
+    margin: 0;
+
+    &:not(:first-child) {
+      margin-top: $mt-sp;
+    }
+  }
+}
+
+$initType: "flex";
+@mixin flex($type: $initType) {
+  //共通スタイル
+  display: flex;
+
+  @if ($type == "flex") {
+    //スタイル
+  } @else if($type == "between") {
+    justify-content: space-between;
+  } @else if($type == "around") {
+    justify-content: space-around;
+  } @else if($type == "center") {
+    justify-content: center;
+  } @else if ($type == "wrap") {
+    flex-wrap: wrap;
+  } @else if ($type == "cc") {
+    justify-content: center;
+    align-items: center;
   }
 }
