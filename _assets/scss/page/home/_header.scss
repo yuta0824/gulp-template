@@ -1,9 +1,8 @@
 @use '../../mixin/mixin' as *;
 @use '../../setting/setting' as *;
 
-/*===============================
-header
-===============================*/
+/* header
+==================================*/
 .header {
   height: $header-height;
   background: $cr-main;
@@ -117,14 +116,14 @@ header
   width: 100%;
 }
 
-.drawer-nav__menu {
+.drawer-nav__items {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px;
 }
 
-.drawer-nav__menu__item {
+.drawer-nav__item {
   text-align: center;
   width: 100%;
   padding: 5px 0;
@@ -136,7 +135,7 @@ header
   }
 }
 
-.drawer-nav__menu__item a {
+.drawer-nav__item a {
   font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
@@ -149,29 +148,21 @@ header
   }
 }
 
-.drawer-nav__menu__item a span {
+.drawer-nav__item a span {
   font-size: 14px;
   color: $cr-accent;
   display: block;
 }
 
-.drawer-nav__menu__item a:hover {
-  color: $cr-accent;
-}
-
-.drawer-nav_home {
+.drawer-nav__home {
   text-align: center;
 }
 
-.drawer-nav_home a {
+.drawer-nav__home a {
   width: 40%;
   display: inline-block;
 
   @include mq("sp") {
     width: 30%;
   }
-}
-
-.drawer-nav_home a img {
-  width: 100%;
 }

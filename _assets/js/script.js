@@ -70,19 +70,19 @@ jQuery(function () {
 });
 
 // ハンバーガーメニュー
-jQuery(".drawer").on("click", function () {
+jQuery(".js-drawer").on("click", function () {
   jQuery(".drawer__line").toggleClass("active");
   jQuery(".drawer-nav").fadeToggle();
 });
 jQuery(".drawer-nav__item a[href]").on("click", function (event) {
-  jQuery(".drawer").trigger("click");
+  jQuery(".js-drawer").trigger("click");
 });
 
 //トップへ戻るスクロール検知
 jQuery(window).on("scroll", function () {
   if (400 < jQuery(this).scrollTop()) {
-    jQuery(".c-to-top").addClass("is-show");
+    jQuery(".js-top").addClass("is-show");
   } else {
-    jQuery(".c-to-top").removeClass("is-show");
+    jQuery(".js-top").removeClass("is-show");
   }
 });

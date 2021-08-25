@@ -28,7 +28,7 @@
   <header class="header">
     <div class="header__inner l-inner">
       <h1 class="header__logo"><a href="/"><img src="./img/logo.png" alt="ロゴ"></a></h1>
-      <nav class="header__nav nav is-tab-pc">
+      <nav class="header__nav nav is-pc">
         <ul class="nav__items">
           <li class="nav__item"><a href="/">ホーム</a></li>
           <li class="nav__item"><a href="/">about</a></li>
@@ -42,7 +42,7 @@
       </nav>
     </div>
 
-    <a class="header__drawer drawer is-sp">
+    <a class="header__drawer drawer js-drawer is-sp">
       <span class="drawer__line drawer__line--top"></span>
       <span class="drawer__line drawer__line--center"></span>
       <span class="drawer__line drawer__line--bottom"></span>
@@ -64,11 +64,11 @@
 
   <main class="main">
     <div class="main__inner l-inner">
-      <h2 class="main__section-title c-section-title">メインコンテンツ</h2>
+      <h2 class="main__sec-tit c-sec-tit">メインコンテンツ</h2>
       <div class="main__boxs boxs">
-        <div class="box box--l">BOX L</div>
-        <div class="box box--m">BOX M</div>
-        <div class="box box--s">BOX S</div>
+        <div class="box box--l anm-up anm--late">BOX L</div>
+        <div class="box box--m anm-up">BOX M</div>
+        <div class="box box--s anm-up">BOX S</div>
       </div>
       <div class="main__btn"><a class="c-btn c-btn--main" href="/">ホームページ</a></div>
       <div class="main__btn"><a class="c-btn c-btn--sub" href="/contact">コンタクトページ</a></div>
@@ -102,8 +102,7 @@
 
 
   <!-- topへ戻る -->
-  <!-- <a class="to_top" href="#"><i class="fas fa-angle-double-up"></i></a> -->
-  <a class="c-to-top" href="#">^</a>
+  <a class="c-to-top js-top" href="#">^</a>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>

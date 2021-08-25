@@ -8,7 +8,6 @@
 }
 
 //固定値（px）をvwに変換する記述
-//参考サイトhttps://haniwaman.com/vw/
 //$width = vw幅
 @function vw($px, $width: $vw-inner-plain) {
   @return $px / $width * 100vw;

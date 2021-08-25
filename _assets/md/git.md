@@ -5,7 +5,7 @@ git init
 git add .
 
 ## コミットメッセージ
-git commit -m "cm"
+git commit -m "fast commit"
 
 ## 直前のコミット前状態に戻す
 git reset --soft HEAD^

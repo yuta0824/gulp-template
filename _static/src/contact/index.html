@@ -26,8 +26,8 @@
 <body>
   <header class="header">
     <div class="header__inner l-inner">
-      <h1 class="header__logo"><a href="/"><img src="../img/logo.png" alt="ロゴ"></a></h1>
-      <nav class="header__nav nav is-tab-pc">
+      <h1 class="header__logo"><a href="/"><img src="./img/logo.png" alt="ロゴ"></a></h1>
+      <nav class="header__nav nav is-pc">
         <ul class="nav__items">
           <li class="nav__item"><a href="/">ホーム</a></li>
           <li class="nav__item"><a href="/">about</a></li>
@@ -41,7 +41,7 @@
       </nav>
     </div>
 
-    <a class="header__drawer drawer is-sp">
+    <a class="header__drawer drawer js-drawer is-sp">
       <span class="drawer__line drawer__line--top"></span>
       <span class="drawer__line drawer__line--center"></span>
       <span class="drawer__line drawer__line--bottom"></span>
@@ -51,7 +51,7 @@
       <div class="drawer-nav__wrap">
         <ul class="drawer-nav__items">
           <li class="drawer-nav__item drawer-nav__home">
-            <a href="./"><img src="../img/logo.png"></a>
+            <a href="./"><img src="./img/logo.png"></a>
           </li>
           <li class="drawer-nav__item"><a href=""><span>home</span>ホーム</a></li>
           <li class="drawer-nav__item"><a href=""><span>home</span>ホーム</a></li>
@@ -59,11 +59,11 @@
         </ul>
       </div>
     </nav><!-- /.ドロワーメニュー -->
-
   </header><!-- /.header -->
 
   <main class="main">
     <div class="main__inner l-inner">
+   
       <table>
         <tr>
           <th>見出し</th>
@@ -108,8 +108,7 @@
 
 
   <!-- topへ戻る -->
-  <!-- <a class="to_top" href="#"><i class="fas fa-angle-double-up"></i></a> -->
-  <a class="c-to-top" href="#">^</a>
+  <a class="c-to-top js-top" href="#">^</a>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="../js/script.js"></script>
 </body>

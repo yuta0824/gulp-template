@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-// カラーなど変数読み込み
+// カラー,変数読み込み
 @use "setting/setting";
 
 // ミックスイン
 @use "mixin/mixin";
 
-// リセットcss
+// ベースCSS
 @use "./foundation";
 
 // 汎用モジュール

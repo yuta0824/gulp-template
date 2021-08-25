@@ -1,10 +1,10 @@
 @use '../mixin/mixin' as *;
 @use '../setting/setting' as *;
-/*===============================
-共通パーツ
-===============================*/
-/*----------- title ---------------*/
-.c-section-title {
+/* component
+==================================*/
+/* sec-tit
+--------------------------*/
+.c-sec-tit {
   color: #333;
   font-size: 3rem;
   position: relative;
@@ -23,42 +23,34 @@
   }
 }
 
-/*----------- ボタン ---------------*/
+/* btn
+--------------------------*/
 .c-btn {
   display: inline-block;
   padding: 1rem 2rem;
   transition: all 0.3s ease 0s;
 
-  // &::after {
-  //   padding-left: 2rem;
-  //   font-family: "Font Awesome 5 Free";
-  //   font-weight: 900;
-  //   content: "\f101";
-  // }
-
-  &:hover {
-    box-shadow: 0px 6px 0px 0px rgb(134, 134, 134);
-    transform: translateY(-4px);
+  @include mq('pc') {
+    &:hover {
+      opacity: $opacity;
+    }
   }
 
-  &:active {
-    box-shadow: 0px 6px 0px 0px rgb(134, 134, 134);
-    transform: translateY(0px);
+  
+  .c-btn--sub {
+    background: $cr-accent;
+    color: #fff;
+  }
+  
+  .c-btn--main {
+    color: $cr-main;
+    border: 1px solid $cr-main;
+    border-radius: 25px;
   }
 }
 
-.c-btn--sub {
-  background: $cr-accent;
-  color: #fff;
-}
-
-.c-btn--main {
-  color: $cr-main;
-  border: 1px solid $cr-main;
-  border-radius: 25px;
-}
-
-/*----------- トップへ戻る ---------------*/
+/* to-top
+--------------------------*/
 .c-to-top {
   display: none;
   width: 60px;

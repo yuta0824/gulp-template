@@ -1,10 +1,9 @@
 @use '../mixin/mixin' as *;
 @use '../setting/setting' as *;
-/*===============================
-共通レイアウト
-===============================*/
-
-/*----------- inner ---------------*/
+/* layout
+==================================*/
+/* inner
+--------------------------*/
 .l-inner {
   max-width: $layout-inner + $pd-pc * 2;
   height: inherit;
@@ -22,47 +21,21 @@
   }
 }
 
-/*------------ フォント ----------------*/
-.l-serif {
-  font-family: "Noto Serif JP";
+/* sec
+--------------------------*/
+.l-sec {
 }
 
-/*------------ margin ----------------*/
-.mt40 {
-  margin-top: 40px;
+/* primary
+--------------------------*/
+.l-primary {
 }
 
-.mt30 {
-  margin-top: 30px;
+/* secondary
+--------------------------*/
+.l-secondary {
 }
 
-.mt20 {
-  margin-top: 20px;
-}
+/* パンクズ
+--------------------------*/
 
-/*------------ padding ----------------*/
-.pt40 {
-  padding-top: 40px;
-}
-
-.pt30 {
-  padding-top: 30px;
-}
-
-.pt20 {
-  padding-top: 20px;
-}
-
-// pcのみ表示
-.is-tab-pc {
-  @include mq("sp") {
-    display: none;
-  }
-}
-
-// spのみ表示
-.is-sp {
-  @include mq("pc") {
-    display: none;
-  }
-}
