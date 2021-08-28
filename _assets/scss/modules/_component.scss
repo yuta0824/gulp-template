@@ -29,24 +29,25 @@
   display: inline-block;
   padding: 1rem 2rem;
   transition: all 0.3s ease 0s;
+  color: blue;
 
   @include mq('pc') {
     &:hover {
       opacity: $opacity;
     }
   }
+  
+}
 
-  
-  .c-btn--sub {
-    background: $cr-accent;
-    color: #fff;
-  }
-  
-  .c-btn--main {
-    color: $cr-main;
-    border: 1px solid $cr-main;
-    border-radius: 25px;
-  }
+.c-btn--sub {
+  background: $cr-accent;
+  color: #fff;
+}
+
+.c-btn--main {
+  color: $cr-main;
+  border: 1px solid $cr-main;
+  border-radius: 25px;
 }
 
 /* to-top

@@ -1,14 +1,13 @@
 /*===============================
 着手前確認事項
 ===============================*/
-・使い回すパーツの把握(すぐに取り掛かるのではなく構成を立ててから)
-・レスポンシブについて事前によく確認する(すぐに取り掛かるのではなく構成を立ててから)
+・使い回すパーツの把握
+・レスポンシブについて事前によく確認する
 	デザインカンプ〜SP間の構造
 ・インナー幅を決定する(内インナー、外インナー)
 ・ブレイクポイントとvwポイントの設計
 ・フォント
 ・OGP
-
 
 /*===============================
 各参考サイト
@@ -18,11 +17,8 @@
 https://www.webdesignleaves.com/pr/plugins/fontawesome_03.html
 https://fontawesome.com/v5.15/icons?d=gallery&p=2
 
-##github
-
-
 ##head内記述
-<link rel="stylesheet" href="fontawesome/css/all.min.css">
+<!-- <link rel="stylesheet" href="fontawesome/css/all.min.css"> -->
 
 ##CSS記述
 .擬似要素 {

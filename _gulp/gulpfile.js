@@ -14,7 +14,7 @@ const mqpacker = require("css-mqpacker"); //メディアクエリをまとめる
 const imagemin = require("gulp-imagemin");
 const imageminMozjpeg = require("imagemin-mozjpeg");
 const imageminPngquant = require("imagemin-pngquant");
-const imageminSvgo = require("imagemin-svgo");
+const imageminsvgo = require("imagemin-svgo");
 
 // 入出力するフォルダを指定
 const srcBase = "../_static/src";
@@ -28,6 +28,7 @@ const srcPath = {
   font: assetsBase + "/font/**/*",
   html: srcBase + "/**/*.html",
   php: srcBase + "/**/*.php",
+  library: assetsBase + "/library/**/*",
 };
 
 const distPath = {
@@ -37,6 +38,7 @@ const distPath = {
   font: distBase + "/font/",
   html: distBase + "/",
   php: distBase + "/",
+  library: distBase + "/library/",
 };
 
 /**
@@ -105,12 +107,8 @@ const imgImagemin = () => {
             quality: 80,
           }),
           imageminPngquant(),
-          imageminSvgo({
-            plugins: [
-              {
-                removeViewbox: false,
-              },
-            ],
+          imagemin.svgo({//svgプラグイン
+            plugins: [{removeViewbox: true}, {cleanupIDs: false}],
           }),
         ],
         {
@@ -143,10 +141,17 @@ const php = () => {
 };
 
 /**
- * 独自fontをsrc配下に読み込む際の対応
+ * 独自font
  */
 const font = () => {
   return gulp.src(srcPath.font).pipe(gulp.dest(distPath.font));
+};
+
+/**
+ * libraryフォルダ
+ */
+const library = () => {
+  return gulp.src(srcPath.library).pipe(gulp.dest(distPath.library));
 };
 
 /**
@@ -184,6 +189,7 @@ const watchFiles = () => {
   gulp.watch(srcPath.img, gulp.series(imgImagemin, browserSyncReload));
   gulp.watch(srcPath.php, gulp.series(php, browserSyncReload));
   gulp.watch(srcPath.font, gulp.series(font, browserSyncReload));
+  gulp.watch(srcPath.library, gulp.series(library, browserSyncReload));
 };
 
 /**
@@ -194,6 +200,6 @@ const watchFiles = () => {
  */
 exports.default = gulp.series(
   clean,
-  gulp.parallel(html, cssSass, js, imgImagemin, php, font),
+  gulp.parallel(html, cssSass, js, imgImagemin, php, font, library),
   gulp.parallel(watchFiles, browserSyncFunc)
 );
