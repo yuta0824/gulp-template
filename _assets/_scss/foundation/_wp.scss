@@ -1,0 +1,26 @@
+@use '../function/setting' as *;
+@use '../function/mixin' as *;
+/* WordPress
+==================================*/
+/* single.php
+--------------------------*/
+.the_content h2 {
+  font-weight: 700;
+}
+
+.the_content ul {
+  list-style: inside;
+  list-style-type: disc;
+}
+
+.the_content li {
+  list-style: inside;
+  list-style-type: disc;
+}
+
+.wp-block-table th,
+.wp-block-table td {
+  border: 1px solid #a0a0ac;
+  vertical-align: middle;
+  padding: 10px 5px;
+}

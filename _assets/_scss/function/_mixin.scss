@@ -1,4 +1,4 @@
-@use '../setting/setting' as *;
+@use './setting' as *;
 
 //メディアクエリー
 @mixin mq($breakpoint: sp) {
@@ -27,6 +27,11 @@
 @function pct($padding, $layout-inner-size: $layout-inner-plain) {
   //デザインカンプのインナー幅
   @return percentage($padding / $layout-inner-size);
+}
+
+// 1/2表示
+@function half($value) {
+  @return $value / 2;
 }
 
 //3点リーダーの記述
@@ -167,4 +172,41 @@ $initType: "flex";
     justify-content: center;
     align-items: center;
   }
+}
+
+//インナー幅いっぱい
+@mixin full-layout($inner: "out") {
+  @if ($inner == "out") {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  } @else if ($inner == "in") {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+  }
+}
+
+//片側のみインナー幅いっぱい
+$direction: "right-out";
+@mixin direction-full-layout($type: $direction) {
+  //共通スタイル
+  width: calc(50vw + 50%);
+
+  @if ($type == "right-out") {
+    //スタイル
+  } @else if ($type == "right-in") {
+    padding-right: calc(50vw - 50%);
+  } @else if ($type == "left-out") {
+    margin-left: calc(50% - 50vw);
+  } @else if ($type == "left-in") {
+    margin-left: calc(50% - 50vw);
+    padding-left: calc(50vw - 50%);
+  }
+}
+
+
+//ホバーアクション
+@mixin hover() {
+  opacity: $opacity;
 }

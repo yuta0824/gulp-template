@@ -1,7 +1,7 @@
-@use '../mixin/mixin' as *;
-@use '../setting/setting' as *;
+@use '../function/setting' as *;
+@use '../function/mixin' as *;
 
-/* base
+/* bases
 ==================================*/
 *,
 *::before,

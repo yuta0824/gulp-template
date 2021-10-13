@@ -1,6 +1,8 @@
-@use '../../mixin/mixin' as *;
-@use '../../setting/setting' as *;
+@use '../function/setting' as *;
+@use '../function/mixin' as *;
 
+/* project
+==================================*/
 /* header
 ==================================*/
 .header {
@@ -53,8 +55,7 @@
   }
 }
 
-/* drawer
---------------------------*/
+/*------------  ドロワーメニュー  ------------*/
 .header__drawer {
   position: fixed;
   top: ($header-height-sp - $drawer-menu-height) / 2;
@@ -166,4 +167,18 @@
   @include mq("sp") {
     width: 30%;
   }
+}
+
+
+/* footer
+==================================*/
+.footer {
+  padding: 30px 0;
+  background: #333;
+  color: #fff;
+}
+
+.nav__items--wrap {
+  flex-wrap: wrap;
+  justify-content: center;
 }

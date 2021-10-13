@@ -1,5 +1,5 @@
-@use '../mixin/mixin' as *;
-@use '../setting/setting' as *;
+@use '../function/setting' as *;
+@use '../function/mixin' as *;
 /* layout
 ==================================*/
 /* inner
@@ -21,21 +21,4 @@
   }
 }
 
-/* sec
---------------------------*/
-.l-sec {
-}
-
-/* primary
---------------------------*/
-.l-primary {
-}
-
-/* secondary
---------------------------*/
-.l-secondary {
-}
-
-/* パンクズ
---------------------------*/
 

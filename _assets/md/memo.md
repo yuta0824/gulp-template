@@ -40,11 +40,6 @@ https://daib-log.com/carousel/
 右上ハンバーガーメニューよりrgbを選択
 
 
-/*------------  WP予約フォーム  ------------*/
-参考サイト
-https://form.run/media/contents/website-lp-creation/wordpress-reservation-systems/
-
-
 /*------------  Github参考  ------------*/
 https://flex-box.net/git/
 

@@ -1,7 +1,11 @@
 const gulp = require("gulp");
 const del = require("del");
 
+//ローカルドメイン
+const localDomain = "http://testserver.local/";
+
 //scss
+const sassGlob = require("gulp-sass-glob-use-forward"); // Sassのglobを有効にする
 const sass = require("gulp-dart-sass"); //Dart Sass はSass公式が推奨 @use構文などが使える
 const plumber = require("gulp-plumber"); // エラーが発生しても強制終了させない
 const notify = require("gulp-notify"); // エラー発生時のアラート出力
@@ -67,6 +71,7 @@ const cssSass = () => {
     .src(srcPath.scss, {
       sourcemaps: true,
     })
+    .pipe(sassGlob()) // Sassのglobを有効にする
     .pipe(
       //エラーが出ても処理を止めない
       plumber({
@@ -75,9 +80,9 @@ const cssSass = () => {
     )
     .pipe(
       sass({
-        outputStyle: "expanded",
+        outputstyle: "expanded",
       })
-    ) //指定できるキー expanded compressed
+    ) //指定できるキー expanded compressed CSS圧縮
     .pipe(autoprefixer(TARGET_BROWSERS))
     .pipe(postcss([mqpacker()])) // メディアクエリをまとめる
     .pipe(
@@ -107,8 +112,9 @@ const imgImagemin = () => {
             quality: 80,
           }),
           imageminPngquant(),
-          imagemin.svgo({//svgプラグイン
-            plugins: [{removeViewbox: true}, {cleanupIDs: false}],
+          imagemin.svgo({
+            //svgプラグイン
+            plugins: [{ removeViewbox: true }, { cleanupIDs: false }],
           }),
         ],
         {
@@ -160,12 +166,12 @@ const library = () => {
 const browserSyncFunc = () => {
   browserSync.init(browserSyncOption);
 };
-
 const browserSyncOption = {
   //静的サイト
   server: distBase,
-  // 動的サイト
-  // proxy: "http://localsite.local/",
+  //動的サイト
+  // proxy: localDomain,
+  // open: true,
 };
 
 /**

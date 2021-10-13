@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// Base CSS
+@use "./foundation/**/*.scss";
+
+// Component CSS
+@use "./component/**/*.scss";
+
+// Layout CSS
+@use "./layout/**/*.scss";
+
+// Project CSS
+@use "./project/**/*.scss";
+
+// Utility CSS
+@use "./utility/**/*.scss";
+
+// animate CSS
+@use './library/**/*.scss';
