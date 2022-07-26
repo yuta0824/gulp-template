@@ -1,5 +1,5 @@
-@use '../function/setting' as *;
-@use '../function/mixin' as *;
+@use "../function/setting" as *;
+@use "../function/mixin" as *;
 /* layout
 ==================================*/
 /* inner
@@ -20,5 +20,3 @@
     padding-left: $pd-sp;
   }
 }
-
-

@@ -21,28 +21,29 @@ const imageminPngquant = require("imagemin-pngquant");
 const imageminsvgo = require("imagemin-svgo");
 
 // 入出力するフォルダを指定
-const srcBase = "../_static/src";
-const assetsBase = "../_assets";
-const distBase = "../_static/dist";
+const srcBase = "../src";
+const srcAssetsBase = "../src/assets";
+const distBase = "../dist";
+const distAssetsBase = "../dist/assets";
 
 const srcPath = {
-  scss: assetsBase + "/scss/**/*.scss",
-  js: assetsBase + "/js/**/*.js",
-  img: [assetsBase + "/img/**/*", "!" + assetsBase + "/img/svg/*.svg"],
-  font: assetsBase + "/font/**/*",
+  scss: srcBase + "/scss/**/*.scss",
+  js: srcAssetsBase + "/js/**/*.js",
+  img: [srcAssetsBase + "/img/**/*", "!" + srcAssetsBase + "/img/svg/*.svg"],
+  font: srcAssetsBase + "/font/**/*",
   html: srcBase + "/**/*.html",
   php: srcBase + "/**/*.php",
-  library: assetsBase + "/library/**/*",
+  library: srcAssetsBase + "/library/**/*",
 };
 
 const distPath = {
-  css: distBase + "/css/",
-  js: distBase + "/js/",
-  img: distBase + "/img/",
-  font: distBase + "/font/",
+  css: distAssetsBase + "/css/",
+  js: distAssetsBase + "/js/",
+  img: distAssetsBase + "/img/",
+  font: distAssetsBase + "/font/",
   html: distBase + "/",
   php: distBase + "/",
-  library: distBase + "/library/",
+  library: distAssetsBase + "/library/",
 };
 
 /**
