@@ -18,7 +18,6 @@ const mqpacker = require("css-mqpacker");
 const imagemin = require("gulp-imagemin");
 const imageminMozjpeg = require("imagemin-mozjpeg");
 const imageminPngquant = require("imagemin-pngquant");
-const imageminsvgo = require("imagemin-svgo");
 
 // 入出力するフォルダを指定
 const srcBase = "../src";
