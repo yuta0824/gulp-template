@@ -1,10 +1,10 @@
-# gulp-template
+# template0-browserSyncReload
 ## How to Use
 ```
 $ git clone https://github.com/yuta0824/gulp-template
 ```
 ```
-$ cd gulp-template/_gulp
+$ cd devsrc
 ```
 ```
 $ npm i
