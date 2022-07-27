@@ -1,7 +1,5 @@
-@use "../function/setting" as *;
-@use "../function/mixin" as *;
-/* form
-==================================*/
+@use '../function' as *;
+
 form {
   margin: 0;
   padding: 0;

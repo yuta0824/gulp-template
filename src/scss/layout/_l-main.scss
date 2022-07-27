@@ -1,0 +1,12 @@
+@use '../function' as *;
+
+.l-main {
+  margin-top: $header-height;
+  text-align: center;
+  padding: 100px 0;
+  
+  @include mq("sp") {
+    margin-top: $header-height-sp;
+    
+  }
+}

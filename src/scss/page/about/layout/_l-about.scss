@@ -1,0 +1,10 @@
+@use '../../../function' as *;
+
+
+.about {
+  color: red;
+
+  @include mq('sp') {
+    color: blue;
+  }
+}

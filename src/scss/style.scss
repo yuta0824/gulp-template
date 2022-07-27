@@ -1,19 +1,30 @@
 @charset "UTF-8";
 
-// Base CSS
-@use "./foundation/**/*.scss";
+// foundation
+//--------------------------
+@use "foundation";
 
-// Component CSS
-@use "./component/**/*.scss";
-
-// Layout CSS
+// layout
+//--------------------------
 @use "./layout/**/*.scss";
 
-// Project CSS
+// component
+//--------------------------
+@use "./component/**/*.scss";
+
+// project
+//--------------------------
 @use "./project/**/*.scss";
 
-// Utility CSS
+// library
+//--------------------------
+@use './library/**/*.scss';
+
+// wordpress
+//--------------------------
+@use './wordpress/**/*.scss';
+
+// utility
+//--------------------------
 @use "./utility/**/*.scss";
 
-// animate CSS
-@use './library/**/*.scss';

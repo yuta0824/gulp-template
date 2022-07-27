@@ -5,14 +5,14 @@ const del = require("del");
 const localDomain = "http://testserver.local/";
 
 //scss
-const sassGlob = require("gulp-sass-glob-use-forward"); // Sassのglobを有効にする
-const sass = require("gulp-dart-sass"); //Dart Sass はSass公式が推奨 @use構文などが使える
-const plumber = require("gulp-plumber"); // エラーが発生しても強制終了させない
-const notify = require("gulp-notify"); // エラー発生時のアラート出力
-const browserSync = require("browser-sync"); //ブラウザリロード
-const autoprefixer = require("gulp-autoprefixer"); //ベンダープレフィックス自動付与
-const postcss = require("gulp-postcss"); //css-mqpackerを使うために必要
-const mqpacker = require("css-mqpacker"); //メディアクエリをまとめる
+const sassGlob = require("gulp-sass-glob-use-forward");
+const sass = require("gulp-dart-sass");
+const plumber = require("gulp-plumber");
+const notify = require("gulp-notify");
+const browserSync = require("browser-sync");
+const autoprefixer = require("gulp-autoprefixer");
+const postcss = require("gulp-postcss");
+const mqpacker = require("css-mqpacker");
 
 //画像圧縮
 const imagemin = require("gulp-imagemin");
@@ -70,11 +70,10 @@ const TARGET_BROWSERS = [
 const cssSass = () => {
   return gulp
     .src(srcPath.scss, {
-      sourcemaps: true,
+      sourcemaps: false,//css.map
     })
-    .pipe(sassGlob()) // Sassのglobを有効にする
+    .pipe(sassGlob())
     .pipe(
-      //エラーが出ても処理を止めない
       plumber({
         errorHandler: notify.onError("Error:<%= error.message %>"),
       })

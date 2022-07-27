@@ -1,0 +1,22 @@
+@use './setting' as *;
+
+//vw計算
+@function vw($size, $window-width: $layout-width-vw-plain) {
+  @return $size / $window-width * 100vw;
+}
+
+// letter-spacing計算
+@function lsp($letter-spacing, $font-size: 16) {
+  @return $letter-spacing / $font-size * 1em;
+}
+
+// パーセント計算
+@function pct($size, $parent-width: $layout-inner-plain) {
+  //デザインカンプのインナー幅
+  @return percentage($size / $parent-width);
+}
+
+// 割り算
+@function division($size, $size2) {
+	@return $size / $size2;
+}

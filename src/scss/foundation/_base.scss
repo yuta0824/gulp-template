@@ -1,8 +1,5 @@
-@use '../function/setting' as *;
-@use '../function/mixin' as *;
+@use '../function' as *;
 
-/* bases
-==================================*/
 *,
 *::before,
 *::after {
@@ -48,8 +45,12 @@ html {
   font-size: 62.5%;
 
   @include mq("vw") {
-    font-size: 1000 / $vw-inner-plain * 1vw;
+    font-size: 1000 / $layout-width-vw-plain * 1vw;
   }
+}
+
+html.is-fixed {
+  overflow: hidden;
 }
 
 body {
@@ -59,6 +60,7 @@ body {
   line-height: $lh-base;
   font-weight: $fw-base;
   font-size: $fz-base;
+  letter-spacing: $ls-base;
 }
 
 ol,
@@ -116,4 +118,20 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid $cr-table;
+}
+
+th,
+td {
+  padding: 4px 6px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid $cr-table;
 }

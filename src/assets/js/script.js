@@ -70,12 +70,13 @@ jQuery(function () {
 });
 
 // ハンバーガーメニュー
-jQuery(".js-drawer").on("click", function () {
-  jQuery(".drawer__line").toggleClass("active");
-  jQuery(".drawer-nav").fadeToggle();
+jQuery(".js-drawer-button").click(function () {
+  jQuery(".js-drawer-button").toggleClass("is-open");
+  jQuery(".js-drawerMenu").fadeToggle();
+  jQuery("html").toggleClass("is-fixed");
 });
-jQuery(".drawer-nav__item a[href]").on("click", function (event) {
-  jQuery(".js-drawer").trigger("click");
+jQuery(".js-drawerMenu li a").click(function () {
+  jQuery(".js-drawer-button").trigger("click");
 });
 
 //トップへ戻るスクロール検知

@@ -18,87 +18,63 @@
   <link rel="apple-touch-icon" href="https://xxxxx.com/img/apple-touch-icon.png">
   <link rel="icon" href="favicon.ico"> -->
   <!-- <link rel="stylesheet" href="library/fontawesome/css/all.min.css"> -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__inner l-inner">
-      <h1 class="header__logo"><a href="/"><img src="./img/logo.png" alt="ロゴ" loading="lazy"></a></h1>
-      <nav class="header__nav nav is-pc">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="/">ホーム</a></li>
-          <li class="nav__item"><a href="/">about</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
+  <header class="l-header">
+    <div class="l-header__inner l-inner">
+      <h1 class="l-header__logo"><a href="/"><img src="./assets/img/logo.png" alt="ロゴ"></a></h1>
+      <nav class="l-header__nav u-hidden-sp">
+        <ul class="p-global-nav">
+          <li class="p-global-nav__item"><a href="#">menu1</a></li>
+          <li class="p-global-nav__item"><a href="#">menu1</a></li>
+          <li class="p-global-nav__item"><a href="#">menu1</a></li>
+          <li class="p-global-nav__item"><a href="#">menu1</a></li>
+          <li class="p-global-nav__item"><a href="#">menu1</a></li>
         </ul>
       </nav>
     </div>
-  </header><!-- /.header -->
-  
-  <a class="drawer js-drawer is-sp">
-    <span class="drawer__line drawer__line--top"></span>
-    <span class="drawer__line drawer__line--center"></span>
-    <span class="drawer__line drawer__line--bottom"></span>
-  </a><!-- /.drawer -->
+  </header><!-- l-header -->
 
-  <nav class="drawer-nav">
-    <div class="drawer-nav__wrap">
-      <ul class="drawer-nav__items">
-        <li class="drawer-nav__item drawer-nav__home">
-          <a href="./"><img src="./img/logo.png" loading="lazy" alt=""></a>
-        </li>
-        <li class="drawer-nav__item"><a href=""><span>home</span>ホーム</a></li>
-        <li class="drawer-nav__item"><a href=""><span>home</span>ホーム</a></li>
-        <li class="drawer-nav__item"><a href=""><span>home</span>ホーム</a></li>
-      </ul>
-    </div>
-  </nav><!-- /.drawer-nav -->
+  <a class="c-drawer-button js-drawer-button u-hidden-overTab">
+    <span class="c-drawer-button__line c-drawer-button__line--top"></span>
+    <span class="c-drawer-button__line c-drawer-button__line--center"></span>
+    <span class="c-drawer-button__line c-drawer-button__line--bottom"></span>
+  </a><!-- c-drawer-button -->
 
-  <main class="main">
-    <div class="main__inner l-inner">
-      <h2 class="main__sec-tit c-sec-tit">メインコンテンツ</h2>
-      <div class="main__boxs boxs">
-        <div class="box box--l anm-up anm--late">BOX L</div>
-        <div class="box box--m anm-up">BOX M</div>
-        <div class="box box--s anm-up">BOX S</div>
-      </div>
-      <div class="main__btn"><a class="c-btn c-btn--main" href="/">ホームページ</a></div>
-      <div class="main__btn"><a class="c-btn c-btn--sub" href="/contact">コンタクトページ</a></div>
-      <div class="main__map map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.74797546837!2d139.74324421470988!3d35.65858048019957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1629097035184!5m2!1sja!2sjp"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-      </div>
+  <div class="p-drawer-contents js-drawerMenu">
+    <ul class="p-drawer-contents__items">
+      <li class="p-drawer-contents__item p-drawer-contents__item--logo">
+        <a href="./"><img src="./assets/img/logo.png" alt="ロゴ"></a>
+      </li>
+      <li class="p-drawer-contents__item"><a href="#">menu1</a></li>
+      <li class="p-drawer-contents__item"><a href="#">menu1</a></li>
+      <li class="p-drawer-contents__item"><a href="#">menu1</a></li>
+      <li class="p-drawer-contents__item"><a href="#">menu1</a></li>
+      <li class="p-drawer-contents__item"><a href="#">menu1</a></li>
+      <li class="p-drawer-contents__item"><a href="#">menu1</a></li>
+    </ul>
+  </div><!-- p-drawer-contents -->
+
+
+  <main class="l-main">
+    <div class="l-inner">
+
+      <h1 class="c-section-title">HelloWorld</h1>
+      <a href="#" class="c-btn c-btn--primary">ボタン</a>
     </div>
   </main><!-- /.main -->
 
-  <footer class="footer">
-    <div class="footer__inner l-inner">
-      <div class="footer__text"></div>
-      <div class="footer__nav nav">
-        <ul class="nav__items nav__items--wrap">
-          <li class="nav__item"><a href="/">ホーム</a></li>
-          <li class="nav__item"><a href="/">about</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-          <li class="nav__item"><a href="/contact">contact</a></li>
-        </ul>
-      </div>
+  <footer class="l-footer">
+    <div class="l-inner">
+      <p class="l-footer__text">copyright2022</p>
     </div>
   </footer><!-- /.footer -->
 
   <a class="c-to-top js-top" href="#">^</a><!-- /.c-to-top -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

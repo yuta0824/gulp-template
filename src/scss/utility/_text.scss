@@ -1,0 +1,19 @@
+@use '../function' as *;
+
+// フォント
+//--------------------------
+.u-fontFamily-serif {
+  font-family: "Noto Serif JP";
+}
+
+// カラー
+//--------------------------
+.u-color-accent {
+  color: $cr-accent;
+}
+
+// テキスト折り返さない
+//--------------------------
+.u-white-space {
+	white-space: nowrap;
+}
