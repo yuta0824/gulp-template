@@ -1,6 +1,6 @@
 @use "../../../global" as *;
 
-.about {
+.l-about {
   color: red;
 
   @include mq("sp") {
