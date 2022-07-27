@@ -1,0 +1,5 @@
+.twitter-timeline {
+	@include mq('sp') {
+		height: 323px !important;
+	}
+}

@@ -1,0 +1,42 @@
+.p-widget {
+	margin-bottom: 46px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	ul {
+		padding: 0 8px;
+		font-size: 16px;
+	}
+
+	li {
+		font-size: inherit;
+		margin-bottom: 12px;
+
+		a {
+			text-decoration: none;
+			display: inline-block;
+			font-size: inherit;
+
+			&:hover {
+				opacity: $opacity;
+			}
+		}
+
+		ul {
+			font-size: 0.85em;
+			margin-top: 12px;
+		}
+	}
+}
+
+.p-widget__title {
+	background: transparent;
+	border-bottom: 1px solid #666;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 8px 6px;
+	margin-bottom: 12px;
+	color: $cr-txt;
+}

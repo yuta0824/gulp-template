@@ -1,22 +1,21 @@
-@use './setting' as *;
+@use "./setting" as *;
 
-//vw計算
-@function vw($size, $window-width: $layout-width-vw-plain) {
-  @return $size / $window-width * 100vw;
+// 割り算
+@function division($numerator, $denominator) {
+  @return $numerator / $denominator;
+}
+
+// vw計算
+@function vw($windows_width, $font_size) {
+  @return $font_size / $windows_width * 100vw;
 }
 
 // letter-spacing計算
-@function lsp($letter-spacing, $font-size: 16) {
-  @return $letter-spacing / $font-size * 1em;
+@function lsp($letter_spacing, $font_size) {
+  @return $letter_spacing / $font_size * 1em;
 }
 
-// パーセント計算
-@function pct($size, $parent-width: $layout-inner-plain) {
-  //デザインカンプのインナー幅
-  @return percentage($size / $parent-width);
-}
-
-// 割り算
-@function division($size, $size2) {
-	@return $size / $size2;
+// rem計算
+@function rem($size) {
+  @return ($size / 16) + rem;
 }

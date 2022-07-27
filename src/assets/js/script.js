@@ -1,5 +1,5 @@
-console.log("aaa");
-
+// common
+//--------------------------
 //375px 未満は JS で viewport を固定する
 (function () {
   const viewport = document.querySelector('meta[name="viewport"]');
