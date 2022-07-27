@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+// フォント
+//--------------------------
+.u-fontFamily-serif {
+  font-family: "Noto Serif JP";
+}
+
+// カラー
+//--------------------------
+.u-color-accent {
+  color: $cr-a;
+}
+
+// テキスト折り返さない
+//--------------------------
+.u-white-space {
+  white-space: nowrap;
+}

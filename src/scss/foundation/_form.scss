@@ -1,0 +1,212 @@
+@use "../global" as *;
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+//ボタン
+button,
+[type="submit"],
+[type="button"] {
+  width: auto;
+  display: inline-block;
+  margin: 0;
+  background-image: none;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  padding: 0.6em 2em;
+  background-color: $cr-m;
+  font-size: 16px;
+
+  &:hover {
+    outline: none;
+  }
+
+  ::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
+}
+
+//テキスト,メール,セレクト,テキストエリア
+[type="text"],
+[type="search"],
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="password"],
+[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 8px;
+  border: solid 1px transparent;
+  border-radius: 0;
+  background-color: $cr-form-bg;
+  background-image: none;
+  font-family: inherit;
+  font-size: 16px;
+  color: inherit;
+  appearance: none;
+
+  @include mq("sp") {
+    padding: 8px 6px;
+  }
+
+  &::placeholder {
+    color: #d7d7d7;
+    font-size: 16px;
+
+    @include mq("sp") {
+      font-size: 14px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:focus {
+    border-color: $cr-form-bd-active;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+//ラジオボタン
+[type="radio"] {
+  display: none;
+
+  + span {
+    font-size: 16px;
+    color: $cr-txt;
+    line-height: 1.5;
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 $size-radio-pd-left;
+    margin: 0 32px 10px 0;
+    cursor: pointer;
+
+    @include mq("sp") {
+      font-size: 14px;
+      margin: 0 10px 8px 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: #fff;
+      border: 1px solid $cr-radio;
+      border-radius: 50%;
+      width: $size-radio;
+      height: $size-radio;
+      display: block;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: ($size-radio - $size-radio-active) / 2;
+      transform: translateY(-50%);
+      background: $cr-radio-active;
+      border-radius: 50%;
+      width: $size-radio-active;
+      height: $size-radio-active;
+      display: block;
+      opacity: 0;
+      transition: opacity 0.3s ease 0s;
+    }
+  }
+
+  &:checked + span {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+//チェックボックス
+[type="checkbox"] {
+  display: none;
+
+  + span {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 $size-checkbox-pd-left;
+    margin: 0 32px 10px 0;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+
+    @include mq("sp") {
+      margin: 0 10px 8px 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: #fff;
+      border: 1px solid $cr-checkbox;
+      width: $size-checkbox;
+      height: $size-checkbox;
+      display: block;
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &:checked + span {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) rotate(-45deg);
+      width: $size-checkbox;
+      height: ($size-checkbox * 0.5);
+      margin-top: -0.2em;
+      display: block;
+      border-left: 3px solid $cr-check-active;
+      border-bottom: 3px solid $cr-check-active;
+      opacity: 1;
+    }
+  }
+}
+
+//セレクト
+select {
+  color: #000;
+  font-size: 16px;
+  background-image: url(../img/common/triangle.svg);
+  background-position: right 16px center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding: 13px 20px;
+  cursor: pointer;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: $cr-form-bd-active;
+  }
+}

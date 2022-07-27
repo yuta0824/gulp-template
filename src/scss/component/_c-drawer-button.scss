@@ -1,0 +1,42 @@
+@use "../global" as *;
+
+.c-drawer-button {
+  position: fixed;
+  top: ($header-height-sp - $drawer-menu-height) / 2;
+  right: 20px;
+  z-index: map-get($layer, drawer);
+  height: $drawer-menu-height;
+  width: $drawer-bar-width;
+}
+
+
+.c-drawer-button__line {
+  background: $drawer-bar-cr;
+  display: block;
+  height: $drawer-bar-height;
+  position: absolute;
+  transition: transform 0.3s;
+  width: 100%;
+}
+
+.c-drawer-button__line--center {
+  top: $drawer-bar-space + $drawer-bar-height;
+}
+
+.c-drawer-button__line--bottom {
+  bottom: 0;
+}
+
+.is-open .c-drawer-button__line--top {
+  top: $drawer-bar-space + $drawer-bar-height;
+  transform: rotate(45deg);
+}
+
+.is-open .c-drawer-button__line--center {
+  transform: scaleX(0);
+}
+
+.is-open .c-drawer-button__line--bottom {
+  bottom: $drawer-bar-space + $drawer-bar-height;
+  transform: rotate(135deg);
+}

@@ -1,0 +1,10 @@
+// ドロワー色
+$drawer-bar-cr: #000;
+$drawer-content-bg: linear-gradient(to right bottom, #a18850, #ffeec7);
+$drawer-content-font-cr: #000;
+
+// ドロワーサイズ
+$drawer-bar-space: 9px;
+$drawer-bar-width: 42px;
+$drawer-bar-height: 3px;
+$drawer-menu-height: ($drawer-bar-height * 3) + ($drawer-bar-space * 2);

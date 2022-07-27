@@ -1,0 +1,34 @@
+@use "../global" as *;
+
+
+.u-hidden-pc {
+	// PC時に非表示
+
+	@include mq("pc") {
+		display: none;
+	}
+}
+
+.u-hidden-tab {
+	// タブレット時に非表示
+
+	@include mq("tab-only") {
+		display: none;
+	}
+}
+
+.u-hidden-sp {
+	// スマホ時に非表示
+
+	@include mq("sp") {
+		display: none;
+	}
+}
+
+.u-hidden-overTab {
+	// スマホ時表示
+	display: none;
+	@include mq("sp") {
+		display: block;
+	}
+}

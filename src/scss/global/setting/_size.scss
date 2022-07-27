@@ -1,0 +1,44 @@
+// レイアウト幅
+$layout-width-canvas: 1440px;
+$layout-width-inner: 1000px;
+$layout-width-vw: 1000;
+$layout-sp: 768px;
+
+// ブレークポイント (PC基準)
+$breakpoints: (
+	"sp": "(max-width: #{$layout-sp - 1})",
+	"tab-only": "(min-width: #{$layout-sp}) and (max-width: #{$layout-width-inner - 1px})",
+	"tab": "(max-width: #{$layout-width-inner - 1px})",
+	"tab-over": "(min-width: #{$layout-sp})",
+	"pc": "(min-width: #{$layout-width-inner})",
+	"vw": "(min-width: #{$layout-sp}) and (max-width: #{$layout-width-canvas - 1})",
+	"header": "(max-width: 1480px)",
+	"hover": "(hover: hover), screen and (min-width: 768px)",
+);
+
+// ヘッダー高さ
+$header-height-pc: 105px;
+$header-height-sp: 80px;
+
+// z-index の指定
+$layer: (
+	loading: 300,
+	modal:   100,
+	drawer:   40,
+	floating: 30,
+	header:   20,
+	footer:   10,
+	default:   1,
+	bg:      -10
+);
+
+// 余白
+$pd-pc: 55px;
+$pd-tab: 55px;
+$pd-sp: 16px;
+
+//フォントサイズ
+$fz-l: 22px;
+$fz-s: 14px;
+$fz-l-sp: 20px;
+$fz-s-sp: 12px;

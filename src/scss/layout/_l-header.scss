@@ -1,0 +1,39 @@
+@use "../global" as *;
+
+// header
+//--------------------------
+.l-header {
+  height: $header-height-pc;
+  background: $cr-m;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: map-get($layer, header);
+
+  @include mq("sp") {
+    height: $header-height-sp;
+  }
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+}
+
+.l-header__logo {
+  max-width: 15rem;
+  margin-right: 10rem;
+}
+
+.l-header__logo a {
+}
+
+.l-header__logo img {
+}
+
+.l-header__nav {
+  margin-left: auto;
+  width: calc(100% - 25rem);
+}
