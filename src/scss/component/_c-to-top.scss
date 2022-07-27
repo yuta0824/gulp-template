@@ -1,4 +1,4 @@
-@use "../function" as *;
+@use "../global" as *;
 
 .c-to-top {
   display: none;
@@ -6,7 +6,7 @@
   height: 60px;
   line-height: 60px;
   text-align: center;
-  background: $cr-main;
+  background: $cr-m;
   position: fixed;
   bottom: 30px;
   font-size: 22px;

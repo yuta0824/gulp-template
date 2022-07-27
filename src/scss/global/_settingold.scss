@@ -1,0 +1,87 @@
+// // カラー
+// $cr-m: #0020d8;
+// $cr-accent: #d3a900;
+// $cr-background: #fff;
+// $cr-text: #333;
+// $cr-table: #333;
+
+// //マウスホバー
+// $opacity: 0.6;
+
+// // 余白
+// $pd-pc: 40px;
+// $pd-tab: 30px;
+// $pd-sp: 20px;
+
+// // レイアウト幅(px)
+// $layout-width-canvas: 1280px; // キャンパスサイズ
+// $layout-width-inner: 1000px; // インナー幅サイズ
+// $layout-width-vw: 1000px; // vw基準サイズ
+// $layout-width-sp: 768px; // スマホサイズ
+
+// // レイアウト幅
+// $layout-width-canvas-plain: 1280; // キャンパスサイズ
+// $layout-width-inner-plain: 1000; // インナー幅サイズ
+// $layout-width-vw-plain: 1000; // vw基準サイズ
+// $layout-width-sp-plain: 768; // スマホサイズ
+
+// // ブレークポイント（PC基準）
+// $breakpoints: (
+//   "sp": "(max-width: #{$layout-width-sp - 1px})",
+//   "tab": "(max-width: #{$layout-width-inner - 1px})",
+//   "tab-only": "(min-width: #{$layout-width-sp}) and (max-width: #{$layout-width-inner - 1px})",
+//   "pc": "(min-width: #{$layout-width-inner})",
+//   "hover": "(hover: hover), screen and (min-width: #{$layout-width-sp})",
+//   "vw": "(min-width: #{$layout-width-sp}) and (max-width: #{$layout-width-vw})",
+// );
+
+// // ヘッダー高さ
+// $header-height: 120px;
+// $header-height-sp: 80px;
+
+// // z-index の指定
+// $layer: (
+//   modal: 400,
+//   drawer: 300,
+//   floating: 200,
+//   header: 100,
+//   default: 1,
+// );
+
+// // フォント
+// $font-family-serif: "Noto Serif JP", "游明朝体", "Yu Mincho", YuMincho,
+//   "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+// $font-family-sans: "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic,
+//   "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+//   "MS Pゴシック", "MS PGothic", sans-serif;
+
+// // ボディベース
+// $fz-base: 16px;
+// $ff-base: "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic,
+// "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+// "MS Pゴシック", "MS PGothic", sans-serif;
+// $fw-base: 500;
+// $lh-base: 1.6;
+// $ls-base: 'normal';
+
+// // フォーム
+// $cr-form-bd: #707070;
+// $cr-form-bd-active: #001aff;
+// $cr-check: #707070;
+// $cr-check-active: #707070;
+// $size-checkbox: 26px;
+// $size-checkbox-pd-left: 30px;
+// $size-radio: 26px;
+// $size-radio-active: 10px;
+// $size-radio-pd-left: 30px;
+
+// // ドロワー色
+// $drawer-bar-cr: #ffffff;
+// $drawer-content-bg: rgb(71, 71, 71);
+// $drawer-content-font-cr: #ffffff;
+
+// // ドロワーサイズ
+// $drawer-bar-space: 10px;
+// $drawer-bar-width: 45px;
+// $drawer-bar-height: 5px;
+// $drawer-menu-height: ($drawer-bar-height * 3) + ($drawer-bar-space * 2);

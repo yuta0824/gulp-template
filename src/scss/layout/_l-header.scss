@@ -1,10 +1,10 @@
-@use "../function" as *;
+@use "../global" as *;
 
 // header
 //--------------------------
 .l-header {
-  height: $header-height;
-  background: $cr-main;
+  height: $header-height-pc;
+  background: $cr-m;
   color: #fff;
   position: fixed;
   top: 0;

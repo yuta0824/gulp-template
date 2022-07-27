@@ -1,4 +1,4 @@
-@use "../function" as *;
+@use "../global" as *;
 
 .c-section-title {
   color: #333;
@@ -15,6 +15,6 @@
     content: "";
     width: 5rem;
     height: 4px;
-    background: $cr-main;
+    background: $cr-m;
   }
 }

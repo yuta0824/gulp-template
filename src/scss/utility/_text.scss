@@ -1,4 +1,4 @@
-@use '../function' as *;
+@use "../global" as *;
 
 // フォント
 //--------------------------
@@ -9,11 +9,11 @@
 // カラー
 //--------------------------
 .u-color-accent {
-  color: $cr-accent;
+  color: $cr-a;
 }
 
 // テキスト折り返さない
 //--------------------------
 .u-white-space {
-	white-space: nowrap;
+  white-space: nowrap;
 }
