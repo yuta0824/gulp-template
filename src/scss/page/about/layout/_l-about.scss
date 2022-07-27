@@ -1,10 +1,9 @@
-@use '../../../function' as *;
+@use "../../../global" as *;
 
-
-.about {
+.l-about {
   color: red;
 
-  @include mq('sp') {
+  @include mq("sp") {
     color: blue;
   }
 }
